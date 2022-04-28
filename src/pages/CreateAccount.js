@@ -14,7 +14,7 @@ function CreateAccount () {
         const [disabled, setDisabled] = React.useState(true);
         const [password, setPassword] = React.useState('');
         const ctx = React.useContext(UserContext);
-
+      
         function validate(field, label) {
                 if(!field){
                         setStatus(label + ' is required');
@@ -30,8 +30,8 @@ function CreateAccount () {
 
         function handleCreate(){
                 console.log(name, email, password);
-                if(!validate(name, 'name')) return;
-                if(!validate(email, 'email')) return;
+                if(!validate(name, 'Name')) return;
+                if(!validate(email, 'Email')) return;
                 if(!validate(password, 'password')) return;
                 ctx.users.push({name,email,password,balance:100});
                 setShow(false);
