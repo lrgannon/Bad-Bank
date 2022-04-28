@@ -15,12 +15,12 @@ import UserContext from '../context';
            
                function validate(deposit) {
                 if (isNaN(deposit)) {
-                  setStatus("Error: Deposit Amount must be a number");
+                  setStatus("Deposit Amount must be a number");
                   setTimeout(() => setStatus(""), 3000);
                   return false;
                 }
                 if (deposit < 1) {
-                  setStatus("Error: Deposit Amount cannot be a negative number");
+                  setStatus("Deposit Amount cannot be a negative number");
                   setTimeout(() => setStatus(""), 3000);
                   return false;
                 }
