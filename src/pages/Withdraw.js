@@ -17,17 +17,17 @@ import UserContext from '../context';
 
                function validate(withdraw, balance) {
                 if (isNaN(withdraw)) {
-                  setStatus("Error: Withdraw Amount must be a number");
+                  setStatus("Withdraw Amount must be a number");
                   setTimeout(() => setStatus(""), 3000);
                   return false;
                 }
                 if (withdraw > balance) {
-                  setStatus("Error: Insuffienct funds");
+                  setStatus("Insuffienct funds");
                   setTimeout(() => setStatus(""), 3000);
                   return false;
                 }
                 if (withdraw < 1) {
-                  setStatus("Error: Withdraw Amount cannot be a negative number");
+                  setStatus("Withdraw Amount cannot be a negative number");
                   setTimeout(() => setStatus(""), 3000);
                   return false;
                 }
